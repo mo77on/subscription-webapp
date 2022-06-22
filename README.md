@@ -62,3 +62,8 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Other Instructions
+1. This web-app is for back-end purposes only.
+2. It uses mailtrap for mailing test
+3. Please use the subscription_vue repostiry for front end in this project.
