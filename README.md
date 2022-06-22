@@ -66,4 +66,4 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 Other Instructions
 1. This web-app is for back-end purposes only.
 2. It uses mailtrap for mailing test
-3. Please use the subscription_vue repostiry for front end in this project.
+3. Please use the subscription_vue repository for front end in this project.
