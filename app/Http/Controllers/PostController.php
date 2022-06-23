@@ -13,12 +13,17 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $users = User::where('role_id', 2)->get();
+      
+        $data = request()->validate([
+            'title' => ['required', 'string'],
+            'description' => ['required', 'string'],
+        ]);
 
         try{
               $post = Post::create([                    
                     'user_id' => 1,
-                    'title' => $request->title,
-                    'description' => $request->description,
+                    'title' => $data['title'],
+                    'description' => $data['description'],
                     'status' => 1,
                 ]);   
                 

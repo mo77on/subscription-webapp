@@ -17,9 +17,13 @@ class UserController extends Controller
             $password = 'password';
         }
 
+        $data = request()->validate([
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+        ]);
+
         return User::create([
             'name' => $request->name ? $request->name : 'Subscriber',
-            'email' => $request->email,
+            'email' => $data['email'],
             'password' => Hash::make($password),
             'role_id' => 2,
         ]);

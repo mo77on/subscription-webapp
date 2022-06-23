@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::post('addpost', ['as' => 'post.add', 'uses' => 'App\Http\Controllers\PostController@store']);
 
+Route::post('/subscribe', ['as' => 'user.subscribe', 'uses' => 'App\Http\Controllers\UserController@register']);
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
